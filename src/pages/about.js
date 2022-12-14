@@ -7,7 +7,6 @@ const about = () => {
       <div className={page}>
         <h1>about page</h1>
         <h1>hello world</h1>
-
         <p className={text}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia nisi
           vitae vel aperiam nihil totam placeat officia at in neque, impedit ea
