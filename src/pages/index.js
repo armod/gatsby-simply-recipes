@@ -1,10 +1,11 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+import Navbar from '../components/Navbar'
 
 export default function Home() {
   return (
     <div>
-      <div>Hello world!</div>
+      <Navbar />
       <div>
         <Link to='/about'>about</Link>
       </div>
