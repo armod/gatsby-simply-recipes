@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import Navbar from '../components/Navbar'
+import Layout from '../components/Layout'
 
 export default function Home() {
   return (
-    <div>
-      <Navbar />
+    <Layout>
+      <h1>home page</h1>
       <div>
         <Link to='/about'>about</Link>
       </div>
@@ -13,6 +13,6 @@ export default function Home() {
         <Link to='/company/history'>history</Link>
       </div>
       <a href='/about'>reg link</a>
-    </div>
+    </Layout>
   )
 }
