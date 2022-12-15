@@ -35,7 +35,6 @@ const Images = () => {
           alt='food'
           placeholder='dominantColor'
           layout='fullWidth'
-          width={200}
           className='example-img'
           as='article'
         />
@@ -56,9 +55,9 @@ const Wrapper = styled.section`
   .example-img {
     border-radius: 1rem;
   }
-  /* @media (min-width: 992px) {
+  @media (min-width: 992px) {
     grid-template-columns: 1fr 1fr 1fr;
-  } */
+  }
 `
 
 export default Images
