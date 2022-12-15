@@ -20,7 +20,7 @@ const Contact = () => {
             </p>
           </article>
           <article>
-            <form className='form contanct-form'>
+            <form className='form contact-form'>
               <div className='form-row'>
                 <label htmlFor='name'>your name</label>
                 <input type='text' name='name' id='name' />
