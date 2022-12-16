@@ -1,39 +1,38 @@
-import * as React from 'react'
+import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-const FetchData = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          author
-          complexData {
-            age
-            name
-          }
-          description
-          person {
-            age
-            name
-          }
-          simpleData
-          title
+const getData = graphql`
+  {
+    site {
+      siteMetadata {
+        author
+        complexData {
+          age
+          name
         }
+        description
+        person {
+          age
+          name
+        }
+        simpleData
+        title
       }
     }
-  `)
+  }
+`
+
+const FetchData = () => {
+  const {
+    site: {
+      siteMetadata: { title },
+    },
+  } = useStaticQuery(getData)
+  // console.log(useStaticQuery(getData))
   return (
     <div>
-      <h2>{data.site.siteMetadata.person.name}</h2>
-      <div>
-        {data.site.siteMetadata.complexData.map((item, index) => {
-          return (
-            <p key={index}>
-              {item.name}:{item.age}
-            </p>
-          )
-        })}
-      </div>
+      {/* <h2>Name: {data.site.siteMetadata.person.name}</h2> */}
+      <h2>site title is: {title}</h2>
     </div>
   )
 }
