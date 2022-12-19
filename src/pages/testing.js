@@ -1,11 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-const Testing = (props) => {
-  console.log(props)
+const Testing = ({ data }) => {
+  // console.log(props)
+  const author = data.site.info.author
   return (
     <div>
-      <h2>Testing</h2>
+      <h2>Author: {author}</h2>
     </div>
   )
 }
