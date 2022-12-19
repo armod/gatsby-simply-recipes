@@ -12,7 +12,7 @@ const Testing = ({ data }) => {
 }
 
 export const data = graphql`
-  {
+  query {
     site {
       info: siteMetadata {
         author
