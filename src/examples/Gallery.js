@@ -23,7 +23,7 @@ const query = graphql`
 
 const Gallery = () => {
   const data = useStaticQuery(query)
-  console.log(data)
+  // console.log(data)
   const nodes = data.allFile.nodes
   return (
     <Wrapper>
@@ -41,6 +41,15 @@ const Gallery = () => {
   )
 }
 
-const Wrapper = styled.section``
+const Wrapper = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  .item {
+    margin-right: 1rem;
+  }
+  .gallery-img {
+    border-radius: 1rem;
+  }
+`
 
 export default Gallery
