@@ -7,6 +7,10 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     title: 'Simply Recipes',
@@ -36,7 +40,7 @@ module.exports = {
       options: {
         spaceId: `mtx2x7bc3dkb`,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: `7eGixkik5jhi3arzLp6SQN2rZGC07eQ-vj4HgAK8RgI`,
+        accessToken: process.env.CONTENTFUL_API_KEY,
       },
     },
   ],
