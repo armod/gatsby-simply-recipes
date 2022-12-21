@@ -24,11 +24,10 @@ const AllRecepies = () => {
   const recipes = data.allContentfulRecipe.nodes
   // console.log(data)
   return (
-    <div>
-      <h4>all recepies</h4>
+    <section className='recipes-container'>
       <TagsList recipes={recipes} />
-      <ReciepiesList />
-    </div>
+      <ReciepiesList recipes={recipes} />
+    </section>
   )
 }
 
