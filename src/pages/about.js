@@ -2,6 +2,22 @@ import React from 'react'
 import Layout from '../components/Layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
+import { graphql } from 'gatsby'
+import ReciepiesList from '../examples/ReciepiesList'
+export const query = graphql`
+  query {
+    allContentfulRecipe(
+      sort: { title: ASC }
+      filter: { fetured: { eq: true } }
+    ) {
+      nodes {
+        id
+        prepTime
+        cookTime
+      }
+    }
+  }
+`
 
 const About = () => {
   return (
@@ -30,6 +46,9 @@ const About = () => {
             className='about-img'
             placeholder='blurred'
           />
+        </section>
+        <section className='featured-recipes'>
+          <h5>Look at this Awesomesouce!</h5>
         </section>
       </main>
     </Layout>
