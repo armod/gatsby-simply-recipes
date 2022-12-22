@@ -19,7 +19,8 @@ export const query = graphql`
   }
 `
 
-const About = () => {
+const About = ({ data }) => {
+  const recipes = data.allContentfulRecipe.nodes
   return (
     <Layout>
       <main className='page'>
@@ -49,6 +50,7 @@ const About = () => {
         </section>
         <section className='featured-recipes'>
           <h5>Look at this Awesomesouce!</h5>
+          <ReciepiesList recipes={recipes} />
         </section>
       </main>
     </Layout>
